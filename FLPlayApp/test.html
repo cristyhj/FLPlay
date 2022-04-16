@@ -12,7 +12,18 @@
 <script type="text/javascript" src="js/before.js"></script>
 
 <body>
-    <div id="main-container">
+	<object classid="clsid:67DABFBF-D0AB-41fa-9C46-CC0F21721616"
+    width="320" height="260"
+    codebase="http://go.divx.com/plugin/DivXBrowserPlugin.cab">
+    <param name="src" value="movie.divx"/>
+     
+    <embed
+        type="video/divx"
+        src="movie.divx"
+        width="320" height="260"
+        pluginspage="http://go.divx.com/plugin/download/">
+    </embed>
+</object>
         <button onclick="startStream('col.torrent')" >Start Collateral</button>
         <button onclick="startStream('danger.torrent')" >Start Danger</button>
         <button onclick="startStream('gary.torrent')" >Start Gary</button>

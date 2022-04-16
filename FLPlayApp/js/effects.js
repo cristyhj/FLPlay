@@ -46,3 +46,8 @@ function toggleLog() {
         el.classList.add('hidden');
     }
 }
+
+function destroyVideo() {
+    var el = document.getElementById('video-container');
+    el.innerHTML = '';
+}

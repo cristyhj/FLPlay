@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FLPlay</title>
+    <link href="http://fonts.googleapis.com/css?family=Archivo+Narrow&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<script src="webOSTVjs-1.2.4/webOSTV.js" charset="utf-8"></script>
+<script src="webOSTVjs-1.2.4/webOSTV-dev.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/before.js"></script>
+
+<body>
+	<embed id="divxplayer" type="video/divx" width="1024" height="768" 
+src ="path_to_file" autoPlay=\"true\" 
+pluginspage=\"http://go.divx.com/plugin/download/\"></embed>
+    <div id="main-container">
+        <button onclick="startStream('col.torrent')" >Start Collateral</button>
+        <button onclick="startStream('danger.torrent')" >Start Danger</button>
+        <button onclick="startStream('gary.torrent')" >Start Gary</button>
+        <pre>
+            <p id="result1"></p>
+            <p id="result2"></p>
+        </pre>
+    </div>
+    <div id="main-loader" class="hidden center-vertically">
+        <div class="center-horizontally">
+            <p>Loading...</p>
+        </div>
+    </div>
+    <div id="main-pause" class="hidden center-vertically">
+        <div class="center-horizontally">
+            <p>Pause</p>
+        </div>
+    </div>
+    <div id="main-play" class="hidden center-vertically">
+        <div class="center-horizontally">
+            <p>Play</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/after.js"></script>
+<script type="text/javascript" src="js/control.js"></script>
+<script type="text/javascript" src="js/effects.js"></script>
+</html>

@@ -6,7 +6,7 @@ var http = require('http');
 var MemoryChunkStore = require('memory-chunk-store');
 var srt2vtt = require('srt-to-vtt');
 var Scraper = require('./scraper');
-var matroska = require('matroska-subtitles');
+var Subtitles = require('./subtitles');
 
 var service = new Service(pkgInfo.name);
 
@@ -43,6 +43,7 @@ function startStreamBody(torrentFile) {
                 console.log('filename: ', file.name);
                 if (file.name.endsWith('.mkv')) {
                     console.log("Stream created!");
+                    startMatroskaSubtitleServer(file.name);
                     startServer(file);
                 }
                 if (file.name.endsWith('.mp4')) {
@@ -104,10 +105,15 @@ function startSubtitleServer(file) {
     }
 }
 
-function startMatroskaSubtitleServer(imdbid) {
+function startMatroskaSubtitleServer(name) {
     try {
         var fileSize = '';
-        
+
+        var subs = new Subtitles();
+        var stream = subs.search(name, function(subtitles) {
+            logg += subtitles;
+            console.log(subtitles)
+        });
      
         var requestListener = function (req, res) {
             var head = {
@@ -387,12 +393,6 @@ service.register("watchTorrent", function(message) {
         } else {
             throw Error('Url not present!')
         }
-        //if (message.payload && message.payload.imdbid) {
-            //var imdbid = message.payload.imdbid;
-            startYifySubtitleServer('tt10334438');
-        //} else {
-            //throw Error('Url not present!')
-        //}
         message.respond({
             returnValue: true,
             mesg: 'Success',

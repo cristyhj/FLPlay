@@ -41,6 +41,7 @@ document.addEventListener("keydown", function(inEvent){
     else if (menu == 'video') {
         switch (keycode) {
             case 13: doPausePlay(); break; 
+            case 461: doExit(); break;
             default: break;
         }
     }
@@ -53,6 +54,15 @@ function doEnter() {
         selected.click();
         menu = 'video';
         showLoading();
+    }
+}
+
+function doExit() {
+    if (menu == 'video') {
+        menu = 'main';
+        destroyVideo();
+        showControls();
+        startCleanUp();
     }
 }
 

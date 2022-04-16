@@ -137,7 +137,7 @@ function getValidator(scraper, path) {
 }
 
 function postLogIn(scraper, validator) {
-    var data = 'validator=' + validator + '&username=########&password=#######&unlock=1&returnto=%252F'
+    var data = 'validator=' + validator + '&username=###&password=###&unlock=1&returnto=%252F'
     var options = {
         hostname: 'filelist.io',
         port: 443,
