@@ -1,0 +1,9 @@
+{
+  "id": "com.nelson.flplay.service",
+  "description": "HelloWorld Service",
+  "services": [
+    {
+      "name": "com.nelson.flplay.service"
+    }
+  ]
+}

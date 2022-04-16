@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@webosose/ares-cli": "^2.2.0",
+    "node-webos": "^0.3.0",
+    "torrent-stream": "^1.2.1",
+    "v8-profiler": "0.0.1"
+  }
+}

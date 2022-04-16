@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FLPlay</title>
+    <link href="http://fonts.googleapis.com/css?family=Archivo+Narrow&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/index.css">
+    <link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet" />
+</head>
+
+<script src="webOSTVjs-1.2.4/webOSTV.js" charset="utf-8"></script>
+<script src="webOSTVjs-1.2.4/webOSTV-dev.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/before.js"></script>
+<script type="text/javascript" src="js/gzip.js"></script>
+
+<body>
+    <div id="main-container" class="flex-box">
+        <div id="nav-bar" class="flex-box-row h-10 w-100">
+            <button id="search-button" class="menu-item m-10" onclick="search()" >Search</button>
+            <input id="search-input" class="menu-item m-10 w-30" type="text" placeholder="Type here..." />
+        </div>
+        <div id="button-container" class="h-90 w-100 p-5 flex-box-row card-container">
+            <div class="menu-item card">
+                <img src="https://image.tmdb.org/t/p/w185//sYkElIUzn9NkVFufpc2oSQlfVsS.jpg">
+                <div class="card-bottom p-10">Apache Jungle 2021 1080p BluRay DD+51x264-iFT</div>
+            </div>
+        </div>
+    </div>
+    <div id="video-container" class="flex-box"></div>
+    <div id="main-loader" class="hidden center-vertically">
+        <div class="center-horizontally">
+            <img src="img/logo.png" width="200" height="200" alt="Loading...">
+            <div class="dot anim-grow-and-shrink"></div>
+        </div>
+    </div>
+    <div id="main-pause" class="hidden center-vertically">
+        <div class="center-horizontally">
+            <img src="img/pause.png" width="200" height="200" alt="Loading...">
+        </div>
+    </div>
+    <div id="main-play" class="hidden center-vertically">
+        <div class="center-horizontally">
+            <img src="img/play.png" width="200" height="200" alt="Loading...">
+        </div>
+    </div>
+    <pre id="log-container" class="hidden"></pre>
+</body>
+<script type="text/javascript" src="js/control.js"></script>
+<script type="text/javascript" src="js/effects.js"></script>
+<script type="text/javascript" src="js/after.js"></script>
+
+<script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
+</html>

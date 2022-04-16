@@ -1,0 +1,16 @@
+{
+  "name": "com.nelson.flplay.service",
+  "version": "1.0.0",
+  "description": "Helloworld service",
+  "main": "helloworld_service.js",
+  "scripts": {
+    "test": "node helloworld_service.js"
+  },
+  "author": "Nelson",
+  "license": "BSD",
+  "dependencies": {
+    "express": "^3.0.0",
+    "torrent-stream": "^1.2.1",
+    "v8-profiler": "0.0.1"
+  }
+}
